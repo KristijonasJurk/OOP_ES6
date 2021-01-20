@@ -21,4 +21,16 @@ const vardai = vardai => console.log(vardai);
 const sum = function (x = 5, y = 6) {
     console.log(x + y);
 }
-sum(2, 1.5)
+// sum(2, 1.5)
+
+
+// map funkcija
+// padaro orginalo kopija ir ja galima modifikuot po to
+// su => galima istrinti abi {} ir return (ir ; po new nereiks)
+
+const pirkiniai = ['pienas', 'duona'];
+
+const naujiPirkiniai = pirkiniai.map(item => {
+    return item + 'new';
+})
+console.log(naujiPirkiniai);
