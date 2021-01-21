@@ -3,12 +3,18 @@ button.addEventListener('click', loadText);
 
 function loadText() {
     var xhr = new XMLHttpRequest();
-    console.log(xhr);
-    xhr.open('GET', '1.txt', true);
+    xhr.open('GET', 'user.json', true);
 
     xhr.onload = function () {
         if (this.status == 200) {
-            console.log(this.responseText);
+            const user = JSON.parse(this.responseText);
+            let output = '';
+            output += `<ul> 
+                <li> ID: ${user.id} </li>
+                <li> ID: ${user.name} </li>
+                <li> ID: ${user.age} </li>
+            </ul>`;
+            document.querySelector('.user').innerHTML = output;
         }
     }
     xhr.send();
