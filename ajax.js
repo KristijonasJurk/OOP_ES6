@@ -20,3 +20,4 @@ function loadText() {
     xhr.send();
 }
 // check out ajax crash course vanilla javascript from 59min
+ 
